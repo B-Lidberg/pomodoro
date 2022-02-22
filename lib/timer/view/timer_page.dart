@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pomodoro/timer/bloc/timer_bloc.dart';
 
 import '../../background.dart';
-import '../../ticker.dart';
+import '../../models/ticker.dart';
 
 class TimerPage extends StatelessWidget {
   const TimerPage({Key? key}) : super(key: key);
@@ -11,7 +11,7 @@ class TimerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => TimerBloc(ticker: Ticker()),
+      create: (_) => TimerBloc(ticker: const Ticker()),
       child: const TimerView(),
     );
   }
